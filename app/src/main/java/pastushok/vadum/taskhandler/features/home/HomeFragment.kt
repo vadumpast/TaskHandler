@@ -2,10 +2,17 @@ package pastushok.vadum.taskhandler.features.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import dagger.hilt.android.AndroidEntryPoint
+import pastushok.vadum.taskhandler.base.BaseContract
 import pastushok.vadum.taskhandler.base.BaseFragment
 import pastushok.vadum.taskhandler.databinding.FragmentHomeBinding
+import javax.inject.Inject
 
-class HomeFragment: BaseFragment<FragmentHomeBinding>() {
+@AndroidEntryPoint
+class HomeFragment: BaseFragment<FragmentHomeBinding>(), BaseContract {
+
+    @Inject
+    lateinit var presenter: HomePresenter
 
     override fun createViewBinding(
         inflater: LayoutInflater,
@@ -13,5 +20,11 @@ class HomeFragment: BaseFragment<FragmentHomeBinding>() {
     ): FragmentHomeBinding {
         return FragmentHomeBinding.inflate(inflater, null, false)
     }
+
+    override fun attachToPresenter() {
+        presenter.attachView(this)
+    }
+
+
 
 }
