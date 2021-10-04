@@ -3,12 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/HomeFragment">
+    app:startDestination="@id/ScheduleFragment">
 
     <fragment
-        android:id="@+id/HomeFragment"
-        android:name="pastushok.vadum.taskhandler.features.home.HomeFragment"
-        android:label="HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/ScheduleFragment"
+        android:name="pastushok.vadum.taskhandler.features.schedule.ScheduleFragment"
+        android:label="ScheduleFragment"
+        tools:layout="@layout/fragment_schedule"/>
+
+    <action android:id="@+id/action_to_schedule"
+        app:destination="@id/ScheduleFragment"/>
+
+    <fragment
+        android:id="@+id/TasksFragment"
+        android:name="pastushok.vadum.taskhandler.features.tasks.TasksFragment"
+        android:label="TasksFragment"
+        tools:layout="@layout/fragment_tasks"/>
+
+    <action android:id="@+id/action_to_tasks"
+        app:destination="@id/TasksFragment"/>
+
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="pastushok.vadum.taskhandler.features.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+
+    <action android:id="@+id/action_to_settings"
+        app:destination="@id/SettingsFragment"/>
 
 </navigation>
