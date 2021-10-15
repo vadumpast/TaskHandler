@@ -5,10 +5,15 @@
       <map>
         <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/drawable/add.xml" value="0.26614583333333336" />
         <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.12760416666666666" />
+        <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/drawable/icon_add.xml" value="0.14322916666666666" />
+        <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/drawable/icon_settings.xml" value="0.26614583333333336" />
         <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/drawable/icon_shedule.xml" value="0.403125" />
         <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/drawable/icon_tasks.xml" value="0.26614583333333336" />
         <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/layout/activity_main.xml" value="0.2749094202898551" />
         <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/layout/fragment_add.xml" value="0.23550724637681159" />
+        <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/layout/fragment_add_schedule.xml" value="0.23550724637681159" />
+        <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/layout/fragment_add_task.xml" value="0.23550724637681159" />
+        <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/layout/fragment_choose_add.xml" value="0.23550724637681159" />
         <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/layout/fragment_home.xml" value="0.176" />
         <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/layout/fragment_schedule.xml" value="0.2" />
         <entry key="..\:/programming/Android/TaskHandler/app/src/main/res/layout/fragment_settings.xml" value="0.38697916666666665" />

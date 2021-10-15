@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_nav_graph"
+    app:startDestination="@id/ChooseAddFragment">
+
+<!--    ChooseAdd-->
+    <fragment
+        android:id="@+id/ChooseAddFragment"
+        android:name="pastushok.vadum.taskhandler.features.choose_add.ChooseAddFragment"
+        android:label="ChooseAddFragment"
+        tools:layout="@layout/fragment_choose_add"/>
+
+    <action android:id="@+id/action_to_choose_add"
+        app:destination="@id/ChooseAddFragment"/>
+
+<!--    AddEvent-->
+    <fragment
+        android:id="@+id/AddEventFragment"
+        android:name="pastushok.vadum.taskhandler.features.add_event.AddEventFragment"
+        android:label="AddEventFragment"
+        tools:layout="@layout/fragment_add_event"/>
+
+    <action android:id="@+id/action_to_add_event"
+        app:destination="@id/AddEventFragment"/>
+
+<!--    AddTask-->
+    <fragment
+        android:id="@+id/AddTaskFragment"
+        android:name="pastushok.vadum.taskhandler.features.add_task.AddTaskFragment"
+        android:label="AddTaskFragment"
+        tools:layout="@layout/fragment_add_task"/>
+
+    <action android:id="@+id/action_to_add_task"
+        app:destination="@id/AddTaskFragment"/>
+
+</navigation>
