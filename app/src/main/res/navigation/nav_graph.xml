@@ -5,6 +5,7 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/ScheduleFragment">
 
+<!--    Schedule-->
     <fragment
         android:id="@+id/ScheduleFragment"
         android:name="pastushok.vadum.taskhandler.features.schedule.ScheduleFragment"
@@ -14,6 +15,7 @@
     <action android:id="@+id/action_to_schedule"
         app:destination="@id/ScheduleFragment"/>
 
+<!--    Tasks-->
     <fragment
         android:id="@+id/TasksFragment"
         android:name="pastushok.vadum.taskhandler.features.tasks.TasksFragment"
@@ -23,6 +25,17 @@
     <action android:id="@+id/action_to_tasks"
         app:destination="@id/TasksFragment"/>
 
+<!--    Add-->
+    <fragment
+        android:id="@+id/AddFragment"
+        android:name="pastushok.vadum.taskhandler.features.add.AddFragment"
+        android:label="AddFragment"
+        tools:layout="@layout/fragment_add"/>
+
+    <action android:id="@+id/action_to_add"
+        app:destination="@id/AddFragment"/>
+
+<!--    Settings-->
     <fragment
         android:id="@+id/SettingsFragment"
         android:name="pastushok.vadum.taskhandler.features.settings.SettingsFragment"

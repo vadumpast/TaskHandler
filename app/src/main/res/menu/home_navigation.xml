@@ -11,6 +11,11 @@
         android:icon="@drawable/icon_tasks"/>
 
     <item
+        android:title="Add"
+        android:id="@+id/AddFragment"
+        android:icon="@drawable/icon_add"/>
+
+    <item
         android:title="Settings"
         android:id="@+id/SettingsFragment"
         android:icon="@drawable/icon_settings"/>
