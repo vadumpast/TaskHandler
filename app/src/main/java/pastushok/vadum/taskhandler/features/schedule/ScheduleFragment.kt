@@ -13,6 +13,8 @@ class ScheduleFragment: BaseFragment<FragmentScheduleBinding>(), ScheduleContrac
 
     @Inject
     lateinit var presenter: SchedulePresenter
+    @Inject
+    lateinit var adapter:SchedulePagerAdapter
 
     override fun createViewBinding(
         inflater: LayoutInflater,
@@ -23,6 +25,10 @@ class ScheduleFragment: BaseFragment<FragmentScheduleBinding>(), ScheduleContrac
 
     override fun attachToPresenter() {
         presenter.attachView(this)
+    }
+
+    override fun setupViewPager(/*data: MutableMap<String, List<String>>*/){
+        binding.viewPagerSchedule.adapter = adapter
     }
 
 }
