@@ -4,6 +4,8 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import pastushok.vadum.taskhandler.base.BasePresenter
 import pastushok.vadum.taskhandler.model.db.DatabaseManager
+import pastushok.vadum.taskhandler.model.entity.db.Event
+import java.util.*
 import javax.inject.Inject
 
 class SchedulePresenter @Inject constructor(
@@ -15,11 +17,22 @@ class SchedulePresenter @Inject constructor(
     }
 
     private fun loadData(){
+        val data: MutableMap<String, MutableList<Event>> = mutableMapOf()
         viewModelScope.launch {
             val events = databaseManager.getAllEvents()
             for(event in events){
                 rootView?.showToast(event.name)
+                val calendar: Calendar = Calendar.getInstance()
+                calendar.timeInMillis = event.date
+
+                val dayOfMonth = calendar.get(Calendar.DAY_OF_WEEK).toString()
+                val month = calendar.get(Calendar.MONTH).toString()
+
+                val day = "$dayOfMonth,$month"
+
+                data[day]?.add(event) ?: data.put(day, mutableListOf(event))
             }
+            rootView?.setupViewPager(data)
         }
     }
 

@@ -6,6 +6,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import pastushok.vadum.taskhandler.base.BaseFragment
 import pastushok.vadum.taskhandler.databinding.FragmentScheduleBinding
 import pastushok.vadum.taskhandler.databinding.FragmentSettingsBinding
+import pastushok.vadum.taskhandler.model.entity.db.Event
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -27,7 +28,8 @@ class ScheduleFragment: BaseFragment<FragmentScheduleBinding>(), ScheduleContrac
         presenter.attachView(this)
     }
 
-    override fun setupViewPager(/*data: MutableMap<String, List<String>>*/){
+    override fun setupViewPager(data: MutableMap<String, MutableList<Event>>){
+        adapter.setData(data)
         binding.viewPagerSchedule.adapter = adapter
     }
 
