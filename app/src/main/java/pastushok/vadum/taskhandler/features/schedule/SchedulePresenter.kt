@@ -17,7 +17,8 @@ class SchedulePresenter @Inject constructor(
     }
 
     private fun loadData(){
-        val data: MutableMap<String, MutableList<Event>> = mutableMapOf()
+        val data: MutableList<Pair<String, MutableList<Event>>> = mutableListOf()
+
         viewModelScope.launch {
             val events = databaseManager.getAllEvents()
             for(event in events){
@@ -25,12 +26,14 @@ class SchedulePresenter @Inject constructor(
                 val calendar: Calendar = Calendar.getInstance()
                 calendar.timeInMillis = event.date
 
-                val dayOfMonth = calendar.get(Calendar.DAY_OF_WEEK).toString()
-                val month = calendar.get(Calendar.MONTH).toString()
+//                val dayOfMonth = calendar.get(Calendar.DAY_OF_WEEK).toString()
+//                val month = calendar.get(Calendar.MONTH).toString()
+//
+//                val day = "$dayOfMonth,$month"
 
-                val day = "$dayOfMonth,$month"
+//                data[day]?.add(event) ?: data.put(day, mutableListOf(event))
+                data.find { it.first == event.date.toString() }?.second?.add(event) ?: data.add(Pair(event.date.toString(), mutableListOf(event)))
 
-                data[day]?.add(event) ?: data.put(day, mutableListOf(event))
             }
             rootView?.setupViewPager(data)
         }

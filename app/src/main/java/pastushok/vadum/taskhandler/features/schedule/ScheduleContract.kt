@@ -5,5 +5,5 @@ import pastushok.vadum.taskhandler.model.entity.db.Event
 
 interface ScheduleContract: BaseContract {
 
-    fun setupViewPager(data: MutableMap<String, MutableList<Event>>)
+    fun setupViewPager(data: MutableList<Pair<String, MutableList<Event>>>)
 }

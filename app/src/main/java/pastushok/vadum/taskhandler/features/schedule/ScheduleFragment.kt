@@ -28,7 +28,7 @@ class ScheduleFragment: BaseFragment<FragmentScheduleBinding>(), ScheduleContrac
         presenter.attachView(this)
     }
 
-    override fun setupViewPager(data: MutableMap<String, MutableList<Event>>){
+    override fun setupViewPager(data: MutableList<Pair<String, MutableList<Event>>>){
         adapter.setData(data)
         binding.viewPagerSchedule.adapter = adapter
     }
