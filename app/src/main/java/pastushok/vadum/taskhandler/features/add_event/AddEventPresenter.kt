@@ -24,6 +24,8 @@ class AddEventPresenter @Inject constructor(
                 Event(
                     name,
                     time,
+                    0,
+                    1,
                     repeat
                 )
             )

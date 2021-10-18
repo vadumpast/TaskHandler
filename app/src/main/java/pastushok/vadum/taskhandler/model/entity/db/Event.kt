@@ -9,6 +9,8 @@ import pastushok.vadum.taskhandler.model.db.DBConfig
 data class Event(
     @ColumnInfo(name = DBConfig.Event.Columns.NAME) val name: String,
     @ColumnInfo(name = DBConfig.Event.Columns.DATE) val date: Long,
+    @ColumnInfo(name = DBConfig.Event.Columns.TIME_START) val timeStart: Long,
+    @ColumnInfo(name = DBConfig.Event.Columns.TIME_END) val timeEnd: Long,
     @ColumnInfo(name = DBConfig.Event.Columns.REPEAT) val repeat: Long,
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = DBConfig.Event.Columns.ID) val id: Long = 0
 )

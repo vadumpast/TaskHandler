@@ -11,6 +11,8 @@ object DBConfig {
         object Columns{
             const val NAME = "name"
             const val DATE = "date"
+            const val TIME_START = "time_start"
+            const val TIME_END = "time_end"
             const val REPEAT = "repeat"
             const val ID = "id"
         }
