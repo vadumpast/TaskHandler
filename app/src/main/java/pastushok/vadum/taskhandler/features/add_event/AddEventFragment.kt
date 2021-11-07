@@ -28,19 +28,22 @@ class AddEventFragment: BaseFragment<FragmentAddEventBinding>(), AddEventContrac
     }
 
     override fun initView() {
-        binding.btnAddEvent.setOnClickListener { presenter.onAddEventClicked() }
+//        binding.btnAddEvent.setOnClickListener { presenter.onAddEventClicked() }
     }
 
     override fun getEventName(): String {
-        return binding.editAddEventName.text.toString()
+        return "0"
+//        binding.editAddEventName.text.toString()
     }
 
     override fun getEventTime(): Long {
-        return binding.editAddEventTime.text.toString().toLong()
+        return 0
+//        binding.editAddEventTime.text.toString().toLong()
     }
 
     override fun getEventRepeat(): Long {
-        return binding.editAddVentRepeat.text.toString().toLong()
+        return 0
+//        binding.editAddVentRepeat.text.toString().toLong()
     }
 
     companion object{
